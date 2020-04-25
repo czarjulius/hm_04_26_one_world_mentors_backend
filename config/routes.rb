@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   root 'user#index'
   get 'user/index'
   post 'signup', to: 'user#signup'

@@ -1,4 +1,5 @@
 class UserController < ApplicationController
+  skip_before_action :authenticate_request, only: [:index, :signup]
   def index
     render json: {message: 'Welcome to One world Mentor'}, status: 200
   end
